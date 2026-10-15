@@ -1,0 +1,15 @@
+function divideBy2(decNumber){
+  const restoStack = new Stack()
+  let resto, binaryString = ''
+
+  while (decNumber > 0){ 
+    resto = parseInt(decNumber % 2)
+    restoStack.push(resto) 
+    decNumber = parseInt(decNumber / 2)
+  }
+  while (!restoStack.isEmpty()){ 
+    binaryString += restoStack.pop().toString()
+  }
+  return binaryString;
+}
+export {divideBy2}
