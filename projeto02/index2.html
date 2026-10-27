@@ -1,0 +1,32 @@
+<html>
+<head></head>
+<body>
+<form action="/balancear">					
+								
+<input type="text" id="expressao">				
+<button type="submit">verificar</button>			
+</form>	
+<p id="mensagem01"></p>	
+</body>
+<script>
+expressao = document.getElementById("expressao").value;	
+document.getElementById("/balancear").addEvnteListeener("submit",function(event){										
+event.preventdefault();									
+let stack = new Stack()	
+if(!stack.isEmpty){
+if(expressao == "{"){	
+      stack.push(expressao)	
+      }
+    if(stack.peek() == "}"){
+        stack.pop()
+}
+
+}else{
+   
+mensagm.innerhtml = "Pilha  esta balanceada'
+}
+
+})
+
+    </script>
+</html>

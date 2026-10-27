@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Conversão Decimal Binário</title>
+</head>
+<body>
+    <h1>Conversão Decimal Binário</h1>
+<p>Informe o número no campo abaixo:</p>
+<input type="number" placeholder="Digite o numero para a conversão " id="number">
+<p id="mensagem"></p>
+<button onclick="divideBy2">Enviar</button>
+</body>
+<script>
+    const decNumber = document.getElementById("number").value;
+    const mensagem = document.getElementById("mensagem").value;
+    function divideBy2(decNumber){
+  const restoStack = new Stack()
+  let resto, binaryString = ''
+
+  while (decNumber > 0){ 
+    resto = parseInt(decNumber % 2)
+    restoStack.push(resto) 
+    decNumber = parseInt(decNumber / 2)
+  }
+  while (!restoStack.isEmpty()){
+     binaryString += restoStack.pop().toString()
+  }
+     mensagem = binaryString;
+  return binaryString;
+  }
+
+
+</script>
+</html>
